@@ -81,13 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  HOMEPAGE
+                  WEB DESIGN PAGE
                 </div>
 
                 <div class="links">
-                  <a href="/">Homepage</a>
-                  <a href="/aboutus">About us</a>
-                  <a href="/webdesign">Web design</a>
+                    <a href="/">Homepage</a>
+                    <a href="/aboutus">About us</a>
+                    <a href="/webdesign">Web design</a>
+
                 </div>
             </div>
         </div>
