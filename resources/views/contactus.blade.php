@@ -81,14 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  HOMEPAGE
+                  CONTACT US PAGE
                 </div>
 
                 <div class="links">
-                  <a href="/">Homepage</a>
-                  <a href="/aboutus">About us</a>
-                  <a href="/webdesign">Web design</a>
-                  <a href="/contact">Contact us</a>
+                    <a href="/">Homepage</a>
+                    <a href="/aboutus">About us</a>
+                    <a href="/webdesign">Web design</a>
+                    <a href="/contact">Contact us</a>
+
                 </div>
             </div>
         </div>

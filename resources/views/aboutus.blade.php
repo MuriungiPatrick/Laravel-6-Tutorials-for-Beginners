@@ -88,6 +88,7 @@
                     <a href="/">Homepage</a>
                     <a href="/aboutus">About us</a>
                     <a href="/webdesign">Web design</a>
+                    <a href="/contact">Contact us</a>
 
                 </div>
             </div>

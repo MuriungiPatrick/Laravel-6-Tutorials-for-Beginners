@@ -15,11 +15,6 @@ Route::get('/', function () {
      //localhost:8000
     return view('welcome');
 });
-// Define the Route for the About us Page
-Route::get('/aboutus', function() {
-  return view('/aboutus');
-});
-// Define the Route for the Web design Page
-Route::get('/webdesign', function() {
-  return view('services.webdesign');
-});
+Route::view('/aboutus', '/aboutus');// Define the Route for the About us Page
+Route::view('/webdesign', 'services.webdesign');// Define the Route for the Web design Page
+Route::view('/contact', '/contactus');// Define the view for the contact page
