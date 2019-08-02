@@ -11,6 +11,6 @@
 |
 */
 Route::get('/', 'PageController@index');// Define the Route for the Homepage
-Route::get('/aboutus', 'PageController@aboutus');// Define the Route for the About us Page
-Route::get('/webdesign', 'PageController@webdesign');// Define the Route for the Web design Page
-Route::get('/contact', 'PageController@contact');// Define the view for the contact page
+Route::get('/aboutus', 'PageController@aboutus')->name('about');// Define the Route for the About us Page
+Route::get('/webdesign', 'PageController@webdesign')->name('services.webdesign');// Define the Route for the Web design Page
+Route::get('/contact', 'PageController@contact')->name('contact');// Define the view for the contact page

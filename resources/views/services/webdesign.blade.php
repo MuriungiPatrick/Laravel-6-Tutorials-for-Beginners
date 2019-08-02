@@ -85,11 +85,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="/">Homepage</a>
-                    <a href="/aboutus">About us</a>
-                    <a href="/webdesign">Web design</a>
-                    <a href="/contact">Contact us</a>
-
+                  <a href="{{ url('/')}}">Homepage</a>
+                  <a href="{{ route('about')}}">About us</a>
+                  <a href="{{ route('services.webdesign')}}">Web design</a>
+                  <a href="{{ route('contact')}}">Contact us</a>
                 </div>
             </div>
         </div>
