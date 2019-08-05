@@ -81,13 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome View
+                  Web design View
                 </div>
 
                 <div class="links">
-                  <a href="/">Home Page</a>
-                  <a href="/about">About us</a>
-                  <a href="/webdesign">Web Design</a>
+                    <a href="/">Home Page</a>
+                    <a href="/about">About us</a>
+                    <a href="/webdesign">Web Design</a>
+
                 </div>
             </div>
         </div>
