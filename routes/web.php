@@ -11,5 +11,5 @@
 |
 */
 Route::get('/', 'PageController@index');//Welcome View
-Route::get('/about', 'PageController@aboutus');//About us View
-Route::get('/webdesign', 'PageController@webdesign');//Webdesign view
+Route::get('/aboutus', 'PageController@aboutus')->name('about');//About us View
+Route::get('/webdesign', 'PageController@webdesign')->name('services.webdesign');//Webdesign view
