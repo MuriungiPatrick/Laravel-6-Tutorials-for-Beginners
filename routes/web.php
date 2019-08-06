@@ -10,6 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::view('/', 'welcome', ['title' => 'Homepage']);//Welcome View
-Route::view('/about', 'aboutus', ['title' => 'Aboutus']);//About us View
-Route::view('/webdesign', 'services.webdesign', ['title' => 'Webdesign']);//Webdesign view
+Route::get('/', 'PageController@index');//Welcome View
+Route::get('/about', 'PageController@aboutus');//About us View
+Route::get('/webdesign', 'PageController@webdesign');//Webdesign view

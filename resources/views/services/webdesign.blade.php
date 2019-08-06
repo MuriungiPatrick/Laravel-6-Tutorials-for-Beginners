@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                  {{$title}} View
+                  webdesign View
                 </div>
 
                 <div class="links">
