@@ -10,15 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route for the Welcome View
-Route::get('/', function () {
-    return view('welcome');
-});
-// Route for the About us View
-Route::get('/about', function () {
-    return view('aboutus');
-});
-// Route for the Webdesign view
-Route::get('/webdesign', function () {
-    return view('services.webdesign');
-});
+Route::view('/', 'welcome', ['title' => 'Homepage']);//Welcome View
+Route::view('/about', 'aboutus', ['title' => 'Aboutus']);//About us View
+Route::view('/webdesign', 'services.webdesign', ['title' => 'Webdesign']);//Webdesign view
