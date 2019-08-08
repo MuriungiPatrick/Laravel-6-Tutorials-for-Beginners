@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('PageTitle', 'Quotes Details View Title')
+@section('Description', 'Description for the Quotes details,Quotes description')
 
 @section('content')
 

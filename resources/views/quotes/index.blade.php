@@ -1,5 +1,7 @@
 @extends('layouts.master')
 @section('PageTitle', 'Quotes Homepage Title')
+@section('Description', 'Description for the Homepage,Quotes description')
+
 @section('content')
     <header class="site-header size-lg text-center" style="background-color:#a767d8">
       {{-- background-image: url(img/bg-banner1.jpg) --}}
