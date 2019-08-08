@@ -8,16 +8,9 @@
    Quotes right now!
    <h5 class="font-alt">Search Quotes in one minute</h5>
    <br>
- <form class="job-search" action="term" value=""  role="search">
-  <input type="hidden" name="_token" value="#">
-<div class="input-keyword">
-<input type="text" class="form-control" placeholder="Quotes, Motivation, or company" name="term">
-  </div>
-  <br><br>
-  <div class="btn-search">
-    <button class="btn btn-lg btn-primary" type="submit">Click to Search Quotes</button>
-  </div>
-</form></h2>
+@include('includes.searchform')
+
+ </h2>
     </div>
   </div>
 </header>
@@ -75,4 +68,5 @@
         </div>
       </section>
       <!-- END Recent jobs -->
+      @include('includes.categories')
 @endsection
