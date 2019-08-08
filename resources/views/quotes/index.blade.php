@@ -26,7 +26,23 @@
           <header class="section-header">
             <h2>Recent Quotes</h2>
           </header>
+@component('components.alert')
+  @slot('class')
+success
+  @endslot
+@slot('alertTitle')
+  welcome to this website
+@endslot
+@endcomponent
 
+@component('components.alert')
+  @slot('class')
+    danger
+  @endslot
+@slot('alertTitle')
+  You're not welcomed on this website
+@endslot
+@endcomponent
           <div class="row jobs-details">
             <!-- START JOB DETAILS -->
               <div class="col-xs-12">

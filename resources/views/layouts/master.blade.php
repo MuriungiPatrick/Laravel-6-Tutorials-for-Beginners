@@ -1,5 +1,5 @@
 @include('includes.head')
     @include('includes.navmenu')
-@yield('content')
+          @yield('content')
 
-    @include('includes.footer')
+@include('includes.footer')
