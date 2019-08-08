@@ -8,6 +8,7 @@
    Quotes right now!
    <h5 class="font-alt">Search Quotes in one minute</h5>
    <br>
+   {{-- @includeif('includes.message') --}}
   @include('includes.searchform')
  </h2>
     </div>
