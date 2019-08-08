@@ -13,4 +13,12 @@ class QuoteController extends Controller
  {
    return view('quotes.index');
  }
+
+ /**
+  * Get the quotes details view
+  */
+ public function show()
+ {
+   return view('quotes.show');
+ }
 }

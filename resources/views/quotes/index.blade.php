@@ -8,8 +8,7 @@
    Quotes right now!
    <h5 class="font-alt">Search Quotes in one minute</h5>
    <br>
-@include('includes.searchform')
-
+  @include('includes.searchform')
  </h2>
     </div>
   </div>
@@ -29,10 +28,10 @@
               <div class="col-xs-12">
               <div class="jobs-block">
                 <header>
-                  <a href="quotes/modi-sit-consequatur-pariatur-aut-voluptate-est"></a>
+                  <a href="{{route('quotes.show')}}"></a>
                   <div class="hgroup">
                     <h4>
-            <a href="quotes/modi-sit-consequatur-pariatur-aut-voluptate-est">Recusandae magni tempore a voluptas dolorem adipisci id.</a>
+            <a href="{{route('quotes.show')}}">Recusandae magni tempore a voluptas dolorem adipisci id.</a>
                     </h4>
                      <div class="spacer-front"></div>
                   </div>
@@ -61,9 +60,7 @@
             <li class="page-item">
               <a class="page-link" href="#" rel="next" aria-label="Next &raquo;">
               </a>
-            </li>
-            </ul>
-</p>
+            </li></ul></p>
 
         </div>
       </section>
