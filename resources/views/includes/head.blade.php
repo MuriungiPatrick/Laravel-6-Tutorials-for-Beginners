@@ -7,7 +7,7 @@
     <meta name="description" content="Description goes here">
     <meta name="keywords" content="Keywords">
 
-    <title>The HomePage - Laravel.app</title>
+    <title>@yield('PageTitle') - Laravel.app</title>
     <!-- Styles -->
     <link href="{{ asset('assets/css/main.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">

@@ -1,4 +1,6 @@
 @extends('layouts.master')
+@section('PageTitle', 'Quotes Details View Title')
+
 @section('content')
 
     <!-- Page header -->
