@@ -3,7 +3,7 @@
 @section('Description', 'Description for the Homepage,Quotes description')
 
 @section('content')
-    <header class="site-header size-lg text-center" style="background-color:#a767d8">
+    <header class="site-header size-lg text-center" style="background-color:#a767d8;">
       {{-- background-image: url(img/bg-banner1.jpg) --}}
   <div class="container">
     <div class="col-xs-12">
@@ -17,28 +17,32 @@
     </div>
   </div>
 </header>
-    <!-- END Site header -->
-    <!-- Main container -->
+    {{-- End Site Header --}}
+
+    {{-- Main Container --}}
     <main>
-      <!-- Recent jobs -->
+      {{-- Recent Quotes --}}
       <section>
         <div class="container">
           <header class="section-header">
             <h2>Recent Quotes</h2>
           </header>
-@auth()
 
+@auth()
+  {{-- Start Component  1--}}
   @component('components.alert')
     @slot('class')
       success
     @endslot
     @slot('alertTitle')
-      welcome to this website
+      Welcome to this website
     @endslot
   @endcomponent
+  {{-- End Component --}}
 @endauth
 
 @guest
+  {{-- Start Component 2 --}}
   @component('components.alert')
     @slot('class')
       danger
@@ -47,9 +51,10 @@
       You're not welcomed on this website
     @endslot
   @endcomponent
+  {{-- End Component 2 --}}
 @endguest
           <div class="row jobs-details">
-            <!-- START JOB DETAILS -->
+            <!-- START QUOTES DETAILS -->
               <div class="col-xs-12">
               <div class="jobs-block">
                 <header>
@@ -63,14 +68,14 @@
                 </header>
 
                <footer>
-              <div class="status"><strong>Posted: &nbsp;<i class="fa fa-clock-o"></i></strong>2 minutes ago &nbsp; By:&nbsp;<a href="author-jobs-details.html">James Mwirigi</a></div>
+              <div class="status"><strong>Posted: &nbsp;<i class="fa fa-clock-o"></i></strong>2 minutes ago &nbsp; By:&nbsp;<a href="{!! route('quotes.show') !!}">James Mwirigi</a></div>
                   <div class="action-btn">
                     <a class="btn btn-xs btn-info" href="category-details.html">Backend</a>
                   </div>
                 </footer>
               </div>
             </div>
-          <!-- END JOB DETAILS -->
+          {{-- End Quote Details --}}
           </div>
 
           <br><br>

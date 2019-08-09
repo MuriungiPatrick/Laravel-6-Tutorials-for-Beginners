@@ -1,3 +1,4 @@
 <div class="alert alert-{{$class}}">
-  <h2>{{ $alertTitle}}</h2>
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <h3 class="text-center">{{ $alertTitle}}</h3>
 </div>
