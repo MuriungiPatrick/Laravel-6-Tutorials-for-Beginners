@@ -18,7 +18,6 @@
   </div>
 </header>
     {{-- End Site Header --}}
-
     {{-- Main Container --}}
     <main>
       {{-- Recent Quotes --}}

@@ -78,12 +78,10 @@
                     @endauth
                 </div>
             @endif
-
             <div class="content">
                 <div class="title m-b-md">
                   Homepage View
                 </div>
-
                 <div class="links">
                   <a href="{{url('/')}}">Home Page</a>
                   <a href="{{ route('about')}}">About us</a>
