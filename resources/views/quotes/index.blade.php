@@ -4,21 +4,21 @@
 
 @section('content')
     <header class="site-header size-lg text-center" style="background-color:#a767d8;">
-      {{-- background-image: url(img/bg-banner1.jpg) --}}
+      <!--  background-image: url(img/bg-banner1.jpg)  -->
   <div class="container">
     <div class="col-xs-12">
       <h2>There are <mark>1,200 +</mark>
    Quotes right now!
    <h5 class="font-alt">Search Quotes in one minute</h5>
    <br>
-   {{-- @includeif('includes.message') --}}
+   <!-- @includeif('includes.message')  -->
   @include('includes.searchform')
  </h2>
     </div>
   </div>
 </header>
-    {{-- End Site Header --}}
-    {{-- Main Container --}}
+    <!--  End Site Header -->
+     <!-- Main Container  -->
     <main>
       {{-- Recent Quotes --}}
       <section>
@@ -28,7 +28,7 @@
           </header>
 
 @auth()
-  {{-- Start Component  1--}}
+  <!-- Start Component  -->
   @component('components.alert')
     @slot('class')
       success
@@ -37,11 +37,11 @@
       Welcome to this website
     @endslot
   @endcomponent
-  {{-- End Component --}}
+  <!--  End Component  -->
 @endauth
 
 @guest
-  {{-- Start Component 2 --}}
+  <!--  Start Component 2 -->
   @component('components.alert')
     @slot('class')
       danger
@@ -50,7 +50,7 @@
       You're not welcomed on this website
     @endslot
   @endcomponent
-  {{-- End Component 2 --}}
+  <!-- End Component 2  -->
 @endguest
           <div class="row jobs-details">
             <!-- START QUOTES DETAILS -->
@@ -74,7 +74,7 @@
                 </footer>
               </div>
             </div>
-          {{-- End Quote Details --}}
+          <!--  End Quote Details  -->
           </div>
 
           <br><br>

@@ -55,6 +55,18 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                        Dashboard
+                                    </a>
+                                    {{-- end dashboard link --}}
+                                    <a class="dropdown-item" href="{{ route('logout') }}">
+                                        Profile Settings
+                                    </a>
+                                    {{-- end Profile settings link --}}
+                                    <a class="dropdown-item" href="{{ route('logout') }}">
+                                        Change Password
+                                    </a>
+                                    {{-- end change password link --}}
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
