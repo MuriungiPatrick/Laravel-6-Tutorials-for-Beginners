@@ -15,7 +15,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                  <form action="index.html" method="post">
+                  <form action="{!! route('profileupdate') !!}" method="post">
+                    @csrf
                     <div class="form-group">
                       <label for="name"><strong>Name:</strong></label>
                       <input type="text" class="form-control" id="name" name="name" value="{{ Auth::user()->name }}">

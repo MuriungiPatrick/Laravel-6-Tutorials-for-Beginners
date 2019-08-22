@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -13,4 +14,16 @@ class ProfileController extends Controller
      {
        return view('profile');
      }
+     /**
+      * Update the Authenticate user profile
+      */
+      public function profileUpdate(Request $request)
+      {
+        //save the Profile update
+        $user = Auth::user();
+        $user->name = $request['name'];
+        $user->email = $request['email'];
+        $user->save();
+        return back();
+      }
 }
