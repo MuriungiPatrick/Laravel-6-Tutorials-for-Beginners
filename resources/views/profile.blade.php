@@ -2,6 +2,16 @@
 
 @section('content')
 <div class="container">
+  @if ($errors->any())
+    <div class="alert alert-danger">
+      <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
+      <ul>
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
     <div class="row justify-content-center">
       <!-- PROFILE SIDEBAR -->
       @include('includes.profile_sidebar')

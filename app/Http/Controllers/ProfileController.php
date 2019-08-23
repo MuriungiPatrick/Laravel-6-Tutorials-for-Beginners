@@ -15,10 +15,15 @@ class ProfileController extends Controller
        return view('profile');
      }
      /**
-      * Update the Authenticate user profile
+      * Update the Authenticated user profile
       */
       public function profileUpdate(Request $request)
       {
+        //Validation rules
+        $request->validate([
+          'name' => 'required|min:6|string|max:255',
+          'email' => 'required|email|string|max:255|unique:users'
+        ]);
         //save the Profile update
         $user = Auth::user();
         $user->name = $request['name'];
