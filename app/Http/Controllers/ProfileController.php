@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use Session;
 
 class ProfileController extends Controller
 {
@@ -19,16 +20,16 @@ class ProfileController extends Controller
       */
       public function profileUpdate(Request $request)
       {
-        //Validation rules
+        //Validation Rules
         $request->validate([
           'name' => 'required|min:6|string|max:255',
-          'email' => 'required|email|string|max:255|unique:users'
+          'email' => 'required|email|string|max:255'
         ]);
         //save the Profile update
         $user = Auth::user();
         $user->name = $request['name'];
         $user->email = $request['email'];
         $user->save();
-        return back();
+        return back()->with('message', 'Profile Updated');;
       }
 }

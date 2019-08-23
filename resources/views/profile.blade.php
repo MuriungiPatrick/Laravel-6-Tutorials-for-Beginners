@@ -12,6 +12,12 @@
       </ul>
     </div>
   @endif
+  @if (session()->get('message'))
+    <div class="alert alert-success" role="alert">
+      <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
+      <strong>SUCCESS:</strong>&nbsp;{{ session()->get('message')}}
+    </div>
+  @endif
     <div class="row justify-content-center">
       <!-- PROFILE SIDEBAR -->
       @include('includes.profile_sidebar')
