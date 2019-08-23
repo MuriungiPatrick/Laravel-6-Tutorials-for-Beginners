@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-use Session;
+
 
 class ProfileController extends Controller
 {
@@ -32,4 +32,11 @@ class ProfileController extends Controller
         $user->save();
         return back()->with('message', 'Profile Updated');;
       }
+      /**
+       * Get the Profile view for changing the password
+       */
+       public function changePasswordForm()
+       {
+         return view('changepassword');
+       }
 }
