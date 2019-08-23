@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use Session;
+use Hash;
 
 class ProfileController extends Controller
 {
@@ -39,4 +40,24 @@ class ProfileController extends Controller
        {
          return view('changepassword');
        }
+       /**
+        * Change the password for the Authenticated user
+        */
+        public function changePassword(Request $request)
+        {
+          if(!(Hash::check($request->get('current_password'), Auth::user()->password))) {
+            return back()->with('error', 'Your current password does not match with what you provided');
+          }
+          if(strcmp($request->get('current_password'), $request->get('new_password')) == 0) {
+            return back()->with('error', 'Your current password cannot be same with the new password');
+          }
+          $request->validate([
+            'current_password' => 'required',
+            'new_password'     => 'required|string|min:6|confirmed'
+          ]);
+          $user = Auth::user();
+          $user->password = bcrypt($request->get('new_password'));
+          $user->save();
+           return back()->with('message', 'Password changed successfully');
+        }
 }

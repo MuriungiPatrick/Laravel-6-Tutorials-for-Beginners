@@ -18,6 +18,7 @@ Route::get('/quotes/show', 'QuoteController@show')->name('quotes.show');// Route
 Auth::routes();
 
 Route::get('/changepassword', 'ProfileController@changePasswordForm')->name('changepassword');
+Route::post('/changepassword', 'ProfileController@changePassword')->name('changepassword');
 Route::get('/profile', 'ProfileController@profile')->name('profile');
 Route::post('/profileupdate', 'ProfileController@profileUpdate')->name('profileupdate');
 Route::get('/home', 'HomeController@index')->name('home');

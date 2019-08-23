@@ -12,6 +12,11 @@
       </ul>
     </div>
   @endif
+  @if (session('error'))
+    <div class="alert alert-danger" role="alert">
+      {{ session('error')}}
+    </div>
+  @endif
   @if (session()->get('message'))
     <div class="alert alert-success" role="alert">
       <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
@@ -31,7 +36,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                  <form action="{!! route('profileupdate') !!}" method="post">
+                  <form action="{!! route('changepassword') !!}" method="post">
                     @csrf
                     <div class="form-group">
                       <label for="current_password"><strong>Current Password:</strong></label>
