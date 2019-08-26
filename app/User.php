@@ -18,13 +18,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password',
     ];
-/**
- * Get Phone associated with a user
- */
- public function phone()
- {
-   return $this->hasOne('App\Phone');
- }
+
     /**
      * The attributes that should be hidden for arrays.
      *

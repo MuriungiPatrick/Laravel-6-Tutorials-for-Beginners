@@ -45,16 +45,20 @@ class ProfileController extends Controller
         */
         public function changePassword(Request $request)
         {
+          //Check If the Current Passwood matches with what is in the database
           if(!(Hash::check($request->get('current_password'), Auth::user()->password))) {
             return back()->with('error', 'Your current password does not match with what you provided');
           }
+          // Compare the Current Password and New Password using[strcmp function]
           if(strcmp($request->get('current_password'), $request->get('new_password')) == 0) {
             return back()->with('error', 'Your current password cannot be same with the new password');
           }
+          //Validate the Password
           $request->validate([
             'current_password' => 'required',
             'new_password'     => 'required|string|min:6|confirmed'
           ]);
+          // Save the New Password to the Database
           $user = Auth::user();
           $user->password = bcrypt($request->get('new_password'));
           $user->save();
