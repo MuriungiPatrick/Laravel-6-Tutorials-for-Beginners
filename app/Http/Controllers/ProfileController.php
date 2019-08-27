@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Session;
 use Hash;
+use Image;
 
 class ProfileController extends Controller
 {
@@ -71,4 +72,24 @@ class ProfileController extends Controller
          {
              return view('profilepicture');
          }
+         /**
+          * upload and change the Profile Avatar for the Authenticated user
+          */
+          public function profilePictureUpload(Request $request)
+          {
+            if($request->hasFile('avatar')) {
+              $avatar = $request->file('avatar');
+              $filename = time() . "." . $avatar->getClientOriginalExtension();
+              Image::make($avatar)->resize(250, 250)->save(public_path('/img/avatar/' . $filename));
+              $user = Auth::user();
+              $user->avatar = $filename;
+
+              //Validate the avatar
+              $request->validate([
+                'avatar' => 'required|image|dimensions:min_width=250,min_height=250|mimes:jpeg,png'
+              ]);
+              $user->save();
+            }
+            return back()->with('message', 'Profile Picture Uploaded Successfully');
+          }
 }
