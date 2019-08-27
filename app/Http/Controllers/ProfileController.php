@@ -45,7 +45,7 @@ class ProfileController extends Controller
         */
         public function changePassword(Request $request)
         {
-          //Check If the Current Passwood matches with what is in the database.
+          //Check if the Current Password matches with what is in the database.
           if(!(Hash::check($request->get('current_password'), Auth::user()->password))) {
             return back()->with('error', 'Your current password does not match with what you provided');
           }
