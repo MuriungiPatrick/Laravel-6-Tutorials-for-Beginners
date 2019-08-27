@@ -59,11 +59,11 @@
                                         Dashboard
                                     </a>
                                     {{-- end dashboard link --}}
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
+                                    <a class="dropdown-item" href="{{ route('profile') }}">
                                         Profile Settings
                                     </a>
                                     {{-- end Profile settings link --}}
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
+                                    <a class="dropdown-item" href="{{ route('changepassword') }}">
                                         Change Password
                                     </a>
                                     {{-- end change password link --}}

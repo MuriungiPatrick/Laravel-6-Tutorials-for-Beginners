@@ -10,23 +10,23 @@ use Hash;
 class ProfileController extends Controller
 {
     /**
-     * Get the User Profile View
+     * Get the User Profile View.
      */
      public function profile()
      {
        return view('profile');
      }
      /**
-      * Update the Authenticated user profile
+      * Update the Authenticated user profile.
       */
       public function profileUpdate(Request $request)
       {
-        //Validation Rules
+        //Validation Rules.
         $request->validate([
           'name' => 'required|min:6|string|max:255',
           'email' => 'required|email|string|max:255'
         ]);
-        //save the Profile update
+        //save the Profile update.
         $user = Auth::user();
         $user->name = $request['name'];
         $user->email = $request['email'];
@@ -34,18 +34,18 @@ class ProfileController extends Controller
         return back()->with('message', 'Profile Updated');;
       }
       /**
-       * Get the Profile view for changing the password
+       * Get the Profile view for changing the password.
        */
        public function changePasswordForm()
        {
          return view('changepassword');
        }
        /**
-        * Change the password for the Authenticated user
+        * Change the password for the Authenticated user.
         */
         public function changePassword(Request $request)
         {
-          //Check If the Current Passwood matches with what is in the database
+          //Check If the Current Passwood matches with what is in the database.
           if(!(Hash::check($request->get('current_password'), Auth::user()->password))) {
             return back()->with('error', 'Your current password does not match with what you provided');
           }
@@ -53,15 +53,22 @@ class ProfileController extends Controller
           if(strcmp($request->get('current_password'), $request->get('new_password')) == 0) {
             return back()->with('error', 'Your current password cannot be same with the new password');
           }
-          //Validate the Password
+          //Validate the Password.
           $request->validate([
             'current_password' => 'required',
             'new_password'     => 'required|string|min:6|confirmed'
           ]);
-          // Save the New Password to the Database
+          // Save the New Password.
           $user = Auth::user();
           $user->password = bcrypt($request->get('new_password'));
           $user->save();
            return back()->with('message', 'Password changed successfully');
         }
+        /**
+         * Get the profile upload view
+         */
+         public function getProfileAvatar()
+         {
+             return view('profilepicture');
+         }
 }
