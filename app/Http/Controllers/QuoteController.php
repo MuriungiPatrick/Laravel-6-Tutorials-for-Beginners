@@ -21,5 +21,5 @@ class QuoteController extends Controller
  {
    return view('quotes.show');
  }
- 
+
 }

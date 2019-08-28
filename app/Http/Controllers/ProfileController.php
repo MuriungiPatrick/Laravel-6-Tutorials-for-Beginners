@@ -10,6 +10,15 @@ use Image;
 
 class ProfileController extends Controller
 {
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
     /**
      * Get the User Profile View.
      */
