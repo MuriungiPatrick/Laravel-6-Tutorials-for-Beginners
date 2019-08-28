@@ -15,7 +15,7 @@ Route::prefix('page')->group(function() {
 Route::get('/', 'QuoteController@index');// Route for the quotes homepage
 Route::get('/quotes/show', 'QuoteController@show')->name('quotes.show');// Route for the quotes Details View
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/profilepicture', 'ProfileController@getProfileAvatar')->name('profileavatar');
 Route::post('/profilepicture', 'ProfileController@profilePictureUpload')->name('profileavatar');

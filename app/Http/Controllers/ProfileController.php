@@ -17,7 +17,7 @@ class ProfileController extends Controller
    */
   public function __construct()
   {
-      $this->middleware('auth');
+      $this->middleware(['auth', 'verified']);
   }
     /**
      * Get the User Profile View.
@@ -95,7 +95,7 @@ class ProfileController extends Controller
 
               //Validate the avatar
               $request->validate([
-                'avatar' => 'required|image|dimensions:min_width=250,min_height=250|mimes:jpeg,png'
+                'avatar' => 'required|image|dimensions:min_width=100,min_height=100|mimes:jpeg,png'
               ]);
               $user->save();
             }
