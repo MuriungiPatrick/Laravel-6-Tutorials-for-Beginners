@@ -24,7 +24,7 @@
 <!-- END PROFILE SIDEBAR -->
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">{{ Auth::user()->name }}'s Dashboard</div>
+                <div class="card-header"><h4>Update your Profile</h4></div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

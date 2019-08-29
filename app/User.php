@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable implements MustVerifyEmail 
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -27,7 +27,13 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $hidden = [
         'password', 'remember_token',
     ];
-
+/**
+ * Get the Phone records associated with the user
+ */
+ public function phone()
+ {
+   return $this->hasOne('App\phone');
+ }
     /**
      * The attributes that should be cast to native types.
      *
