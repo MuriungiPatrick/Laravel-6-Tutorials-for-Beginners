@@ -18,7 +18,13 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $fillable = [
         'name', 'email', 'password',
     ];
-
+/**
+ * Get the roles that belongs to the user
+ */
+ public function roles()
+ {
+   return $this->belongsToMany(Role::class, 'role_user');
+ }
     /**
      * The attributes that should be hidden for arrays.
      *
