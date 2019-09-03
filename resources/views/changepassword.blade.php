@@ -54,7 +54,7 @@
                     </div>
                     <!-- end Name Input -->
 
-                    <button class="btn btn-primary" type="submit">Change Password</button>
+                    <button class="btn btn-success" type="submit">Change Password</button>
                   </form>
                 </div>
             </div>

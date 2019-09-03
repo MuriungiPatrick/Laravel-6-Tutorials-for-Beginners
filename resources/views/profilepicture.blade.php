@@ -36,8 +36,14 @@
                       <input type="file" name="avatar" class="form-control">
                       <input type="hidden" class="form-control" name="_token" value="{{ csrf_token() }}">
                     </div>
+                    <strong>NOTE:</strong>
+                <ul>
+                  <li>Picture dimensions should be above 250 x 250px</li>
+                  <li>File Size Less than 1MB</li>
+                  <li>Allowed (Jpeg & Png)</li>
+                </ul>
                      <br>
-                    <button class="btn btn-primary" type="submit">Upload Picture</button>
+                    <button class="btn btn-success" type="submit">Upload Picture</button>
                   </form>
                 </div>
             </div>

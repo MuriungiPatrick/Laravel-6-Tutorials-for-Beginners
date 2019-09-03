@@ -43,7 +43,7 @@
                       <input type="email" class="form-control" id="email" name="email" value="{{ Auth::user()->email }}">
                     </div>
                     <!-- end Email Input -->
-                    <button class="btn btn-primary" type="submit">Update Profile</button>
+                    <button class="btn btn-success" type="submit">Save Profile</button>
                   </form>
                 </div>
             </div>

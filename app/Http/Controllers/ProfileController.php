@@ -95,7 +95,7 @@ class ProfileController extends Controller
 
               //Validate the avatar
               $request->validate([
-                'avatar' => 'required|image|dimensions:min_width=100,min_height=100|mimes:jpeg,png'
+                'avatar' => 'required|image|dimensions:min_width=200,min_height=200|mimes:jpeg,png'
               ]);
               $user->save();
             }
