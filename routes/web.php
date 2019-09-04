@@ -28,3 +28,11 @@ Route::get('/profile', 'ProfileController@profile')->name('profile');
 Route::post('/profileupdate', 'ProfileController@profileUpdate')->name('profileupdate');
 //Dashboard Home
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

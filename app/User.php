@@ -19,14 +19,14 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'email', 'password',
     ];
     /**
-     * Get the jobs for the user
+     * The jobs for the user
      */
      public function jobs()
      {
        return $this->hasMany('App\Job', 'client_id');
      }
     /**
-     * Get the roles that belongs to the user
+     * The roles that belongs to the user
      */
      public function roles()
      {
@@ -40,13 +40,13 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $hidden = [
         'password', 'remember_token',
     ];
-/**
- * Get the Phone records associated with the user
- */
- public function phone()
- {
-   return $this->hasOne('App\phone');
- }
+    /**
+     * Get the Phone records associated with the user
+     */
+     public function phone()
+     {
+       return $this->hasOne('App\phone');
+     }
     /**
      * The attributes that should be cast to native types.
      *
