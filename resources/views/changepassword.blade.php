@@ -14,6 +14,7 @@
   @endif
   @if (session('error'))
     <div class="alert alert-danger" role="alert">
+      <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
       {{ session('error')}}
     </div>
   @endif
@@ -36,24 +37,23 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                  <form action="{!! route('changepassword') !!}" method="post">
+                  <form action="{!! route('changepassword') !!}" method="POST">
                     @csrf
                     <div class="form-group">
                       <label for="current_password"><strong>Current Password:</strong></label>
                       <input type="password" class="form-control" id="current_password" name="current_password">
                     </div>
-                    <!-- end Name Input -->
+                    <!-- End Current Password Input -->
                     <div class="form-group">
                       <label for="new_password"><strong>New Password:</strong></label>
                       <input type="password" class="form-control" id="new_password" name="new_password">
                     </div>
-                    <!-- end Name Input -->
+                    <!-- End New Password Input -->
                     <div class="form-group">
                       <label for="new_password_confirmation"><strong>Confirm New Password:</strong></label>
                       <input type="password" class="form-control" id="new_password_confirmation" name="new_password_confirmation">
                     </div>
-                    <!-- end Name Input -->
-
+                    <!-- End New Confirm Password Input -->
                     <button class="btn btn-success" type="submit">Change Password</button>
                   </form>
                 </div>
