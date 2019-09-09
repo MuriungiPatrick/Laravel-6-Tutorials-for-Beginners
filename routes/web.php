@@ -12,8 +12,12 @@ Route::prefix('page')->group(function() {
 // Route::get('/', 'PageController@index');//Welcome View
 
 
-Route::get('/', 'QuoteController@index');// Route for the quotes homepage
-Route::get('/quotes/show', 'QuoteController@show')->name('quotes.show');// Route for the quotes Details View
+Route::get('/', 'JobController@index');// The Jobs homepage
+Route::get('/jobs/show', 'JobController@show')->name('jobs.show');// The Jobs Details View
+
+
+// Route::get('/', 'QuoteController@index');// The quotes homepage
+Route::get('/quotes/show', 'QuoteController@show')->name('quotes.show');// The quotes Details View
 
 Auth::routes(['verify' => true]);
 
@@ -27,12 +31,4 @@ Route::post('/changepassword', 'ProfileController@changePassword')->name('change
 Route::get('/profile', 'ProfileController@profile')->name('profile');
 Route::post('/profileupdate', 'ProfileController@profileUpdate')->name('profileupdate');
 //Dashboard Home
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
