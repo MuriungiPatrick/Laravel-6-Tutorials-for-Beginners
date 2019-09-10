@@ -41,26 +41,31 @@
 @endguest
           <div class="row jobs-details">
             <!-- START QUOTES DETAILS -->
-              <div class="col-xs-12">
-              <div class="jobs-block">
-                <header>
-                  <a href="{{route('jobs.show')}}"></a>
-                  <div class="hgroup">
-                    <h4>
-            <a href="{{route('jobs.show')}}">Recusandae magni tempore a voluptas dolorem adipisci id.</a>
-                    </h4>
-                     <div class="spacer-front"></div>
-                  </div>
-                </header>
+            @foreach ($jobs as $key => $job)
 
-               <footer>
-              <div class="status"><strong>Posted: &nbsp;<i class="fa fa-clock-o"></i></strong>2 minutes ago &nbsp; By:&nbsp;<a href="{!! route('quotes.show') !!}">James Mwirigi</a></div>
-                  <div class="action-btn">
-                    <a class="btn btn-xs btn-info" href="category-details.html">Backend</a>
-                  </div>
-                </footer>
+              <div class="col-xs-12">
+                <div class="jobs-block">
+                  <header>
+                    <img src="/img/avatar/{{ $job->client->avatar}}" alt="" style="width:70px; height:70px;">
+                    <a href="{{route('jobs.show')}}"></a>
+                    <div class="hgroup">
+                      <h4>
+                        <a href="{{route('jobs.show')}}">{{$job->job_title}}</a>
+                      </h4>
+                      <div class="spacer-front"></div>
+
+                    </div>
+                  </header>
+                  <footer>
+                    <div class="status"><strong>Posted: &nbsp;<i class="fa fa-clock-o"></i></strong>2 minutes ago &nbsp; By:&nbsp;<a href="{!! route('quotes.show') !!}">{{$job->client->name}}</a></div>
+                    <div class="action-btn">
+                        {{$job->salary}}
+                      <a class="btn btn-xs btn-info" href="category-details.html">{{$job->job_type}}</a>
+                    </div>
+                  </footer>
+                </div>
               </div>
-            </div>
+            @endforeach
           <!--  End Quote Details  -->
           </div>
 

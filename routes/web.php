@@ -16,7 +16,7 @@ Route::get('/', 'JobController@index');// The Jobs homepage
 Route::get('/jobs/show', 'JobController@show')->name('jobs.show');// The Jobs Details View
 
 
-// Route::get('/', 'QuoteController@index');// The quotes homepage
+Route::get('/quotes/index', 'QuoteController@index');// The quotes homepage
 Route::get('/quotes/show', 'QuoteController@show')->name('quotes.show');// The quotes Details View
 
 Auth::routes(['verify' => true]);
