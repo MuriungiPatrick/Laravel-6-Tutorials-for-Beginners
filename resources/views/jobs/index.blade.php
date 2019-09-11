@@ -46,21 +46,19 @@
               <div class="col-xs-12">
                 <div class="jobs-block">
                   <header>
-                    <img src="/img/avatar/{{ $job->client->avatar}}" alt="" style="width:70px; height:70px;">
-                    <a href="{{route('jobs.show')}}"></a>
+                    <img src="/img/avatar/{{ $job->client->avatar}}" alt="client-avatar" style="width:70px; height:70px;border-radius:50%;">
+                    <a href="{{route('jobs.show', $job->id)}}"></a>
                     <div class="hgroup">
                       <h4>
-                        <a href="{{route('jobs.show')}}">{{$job->job_title}}</a>
+                        <a href="{{route('jobs.show', $job->id)}}">{{$job->job_title}}</a>
                       </h4>
                       <div class="spacer-front"></div>
-
                     </div>
                   </header>
                   <footer>
                     <div class="status"><strong>Posted: &nbsp;<i class="fa fa-clock-o"></i></strong>2 minutes ago &nbsp; By:&nbsp;<a href="{!! route('quotes.show') !!}">{{$job->client->name}}</a></div>
                     <div class="action-btn">
-                        {{$job->salary}}
-                      <a class="btn btn-xs btn-info" href="category-details.html">{{$job->job_type}}</a>
+                        <a class="btn btn-xs btn-info" href="category-details.html">{{$job->job_type}}</a>
                     </div>
                   </footer>
                 </div>

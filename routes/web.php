@@ -13,7 +13,7 @@ Route::prefix('page')->group(function() {
 
 
 Route::get('/', 'JobController@index');// The Jobs homepage
-Route::get('/jobs/show', 'JobController@show')->name('jobs.show');// The Jobs Details View
+Route::get('/jobs/{id}', 'JobController@show')->name('jobs.show');// The Jobs Details View
 
 
 Route::get('/quotes/index', 'QuoteController@index');// The quotes homepage
