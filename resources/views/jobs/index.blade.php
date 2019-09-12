@@ -47,10 +47,10 @@
                 <div class="jobs-block">
                   <header>
                     <img src="/img/avatar/{{ $job->client->avatar}}" alt="client-avatar" style="width:70px; height:70px;border-radius:50%;">
-                    <a href="{{route('jobs.show', $job->id)}}"></a>
+                    <a href="{{route('jobs.show', $job->slug)}}"></a>
                     <div class="hgroup">
                       <h4>
-                        <a href="{{route('jobs.show', $job->id)}}">{{$job->job_title}}</a>
+                        <a href="{{route('jobs.show', $job->slug)}}">{{$job->job_title}}</a>
                       </h4>
                       <div class="spacer-front"></div>
                     </div>
