@@ -57,8 +57,12 @@
                   </header>
                   <footer>
                     <div class="status"><strong>Posted: &nbsp;<i class="fa fa-clock-o"></i></strong>2 minutes ago &nbsp; By:&nbsp;<a href="{!! route('quotes.show') !!}">{{$job->client->name}}</a></div>
+
                     <div class="action-btn">
-                        <a class="btn btn-xs btn-info" href="category-details.html">{{$job->job_type}}</a>
+                        <a class="btn btn-xs btn-info btn-outline"><strong>Job Type:</strong>&nbsp;{{$job->job_type}}</a>
+                    </div>
+                    <div class="action-btn">
+                        <a class="btn btn-xs btn-outline btn-warning"><strong>Salary:</strong>&nbsp;{{$job->salary}}</a>
                     </div>
                   </footer>
                 </div>
