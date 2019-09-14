@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+      $this->middleware(['auth', 'verified']);
+  }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +23,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.index');
     }
 
     /**
@@ -23,7 +33,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.create');
     }
 
     /**
@@ -45,7 +55,7 @@ class DashboardController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('dashboard.show');
     }
 
     /**
@@ -56,7 +66,7 @@ class DashboardController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('dashboard.edit');
     }
 
     /**
