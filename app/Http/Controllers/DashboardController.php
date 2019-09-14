@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Job;
 
 class DashboardController extends Controller
 {
-  /**
-   * Create a new controller instance.
-   *
-   * @return void
-   */
-  public function __construct()
-  {
-      $this->middleware(['auth', 'verified']);
-  }
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
 
     /**
      * Display a listing of the resource.
@@ -23,7 +24,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+      $jobs = Job::where('client_id', Auth()->id())->get();
+      return view('dashboard.index', compact('jobs'));
     }
 
     /**
