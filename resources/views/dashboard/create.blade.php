@@ -15,7 +15,35 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                   <h2>Display the form for creating a new Resource</h2>
+                  <form action="dashboard.store" method="post">
+                    <div class="form-group">
+                      <label for="job_title"><strong>JOB TITLE:</strong></label>
+                      <input type="text" class="form-control" name="job_title">
+                    </div>
+                    <!-- End Job Title -->
+                    <div class="form-group">
+                      <label for="job_type"><strong>JOB TYPE:</strong></label>
+                      <input type="text" class="form-control" name="job_type">
+                    </div>
+                    <!-- End Job Type -->
+                    <div class="form-group">
+                      <label for="salary"><strong>SALARY:</strong></label>
+                      <input type="text" class="form-control" name="salary">
+                    </div>
+                    <!-- End Salary-->
+                    <div class="form-group">
+                      <label for="slug"><strong>SLUG:</strong></label>
+                      <input type="text" class="form-control" name="slug">
+                    </div>
+                    <!-- End Slug -->
+                    <div class="form-group">
+                      <label for="job_description"><strong>JOB DESCRIPTION:</strong></label>
+                      <textarea name="" id="" rows="10" class="form-control"></textarea>
+                    </div>
+                    <!-- End Job Description -->
+                      <button class="btn btn-success" type="submit">Save</button>
+
+                  </form>
                 </div>
             </div>
         </div>
