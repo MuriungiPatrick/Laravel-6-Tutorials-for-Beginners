@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Job extends Model
 {
+  /**
+   * Attributes that are mass assignable
+   */
+   protected $guarded = [];
     /**
      * Get the client that owns the job
      */
