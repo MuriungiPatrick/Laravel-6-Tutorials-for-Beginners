@@ -100,6 +100,9 @@ class DashboardController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $job = Job::find($id);
+       $job->delete();
+
+       return redirect('/dashboard')->with('message', 'Job Post deleted successfully');
     }
 }

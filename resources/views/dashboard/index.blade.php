@@ -46,7 +46,14 @@
                           <td>{{$job->id}}</td>
                           <td>{{$job->job_title}}</td>
                           <td><a href="{{route('dashboard.edit', $job->id)}}" class="btn btn-primary btn-xs">edit</a></td>
-                          <td><a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                          <td>
+                            <form action="{{route('dashboard.destroy', $job->id)}}" method="post">
+                              @method('DELETE')
+                              @csrf
+                              <button class="btn btn-danger btn-xs">Delete</button>
+                            </form>
+
+                            </td>
                         </tr>
                       </tbody>
                       @endforeach
