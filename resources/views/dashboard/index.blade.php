@@ -15,6 +15,22 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    @if ($errors->any())
+                      <div class="alert alert-danger">
+                        <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
+                        <ul>
+                          @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                          @endforeach
+                        </ul>
+                      </div>
+                    @endif
+                    @if (session()->get('message'))
+                      <div class="alert alert-success" role="alert">
+                        <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
+                        <strong>SUCCESS:</strong>&nbsp;{{ session()->get('message')}}
+                      </div>
+                    @endif
                   <table class="table table-bordered">
                     <thead>
                       <tr>

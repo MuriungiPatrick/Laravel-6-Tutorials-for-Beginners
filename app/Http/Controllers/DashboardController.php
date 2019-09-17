@@ -81,7 +81,15 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+          'job_title'           => 'required',
+          'slug'                 => 'required',
+          'job_type'          => 'required',
+          'salary'              => 'required',
+          'job_description' => 'max:1000'
+        ]);
+        Job::find($id)->update($request->all());
+        return redirect()->route('dashboard.index')->with('message', 'Job Post Updated successfully');
     }
 
     /**
