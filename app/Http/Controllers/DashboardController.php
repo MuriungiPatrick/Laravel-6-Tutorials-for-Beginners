@@ -68,7 +68,8 @@ class DashboardController extends Controller
      */
     public function edit($id)
     {
-        return view('dashboard.edit');
+        $job = Job::find($id);
+        return view('dashboard.edit', compact('job'));
     }
 
     /**

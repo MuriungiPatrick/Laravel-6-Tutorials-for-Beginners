@@ -15,7 +15,37 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                   <h2>Display the Form for editing the Specified Resource</h2>
+                    <form action="{{route('dashboard.update', $job->id)}}" method="POST">
+                      @method('PATCH')
+                      @csrf
+                      <div class="form-group">
+                        <label for="job_title"><strong>JOB TITLE:</strong></label>
+                        <input type="text" class="form-control" name="job_title" value="{{$job->job_title}}">
+                      </div>
+                      <!-- End Job Title -->
+                      <div class="form-group">
+                        <label for="job_type"><strong>JOB TYPE:</strong></label>
+                        <input type="text" class="form-control" name="job_type" value="{{$job->job_type}}">
+                      </div>
+                      <!-- End Job Type -->
+                      <div class="form-group">
+                        <label for="salary"><strong>SALARY:</strong></label>
+                        <input type="text" class="form-control" name="salary" value="{{$job->salary}}">
+                      </div>
+                      <!-- End Salary-->
+                      <div class="form-group">
+                        <label for="slug"><strong>SLUG:</strong></label>
+                        <input type="text" class="form-control" name="slug" value="{{$job->slug}}">
+                      </div>
+                      <!-- End Slug -->
+                      <div class="form-group">
+                        <label for="job_description"><strong>JOB DESCRIPTION:</strong></label>
+                        <textarea name="" id="" rows="10" class="form-control">{{$job->job_description}}</textarea>
+                      </div>
+                      <!-- End Job Description -->
+                        <button class="btn btn-success" type="submit">Save</button>
+
+                    </form>
                 </div>
             </div>
         </div>

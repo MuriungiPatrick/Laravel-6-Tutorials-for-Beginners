@@ -29,7 +29,7 @@
                         <tr>
                           <td>{{$job->id}}</td>
                           <td>{{$job->job_title}}</td>
-                          <td><a href="#" class="btn btn-primary btn-xs">edit</a></td>
+                          <td><a href="{{route('dashboard.edit', $job->id)}}" class="btn btn-primary btn-xs">edit</a></td>
                           <td><a href="#" class="btn btn-danger btn-xs">Delete</a></td>
                         </tr>
                       </tbody>
