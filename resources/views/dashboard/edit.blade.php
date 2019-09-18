@@ -40,7 +40,7 @@
                       <!-- End Slug -->
                       <div class="form-group">
                         <label for="job_description"><strong>JOB DESCRIPTION:</strong></label>
-                        <textarea name="" id="" rows="10" class="form-control">{{$job->job_description}}</textarea>
+                        <textarea name="job_description" id="job_description" rows="10" class="form-control">{{$job->job_description}}</textarea>
                       </div>
                       <!-- End Job Description -->
                         <button class="btn btn-success" type="submit">Save</button>

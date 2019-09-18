@@ -15,7 +15,18 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                  <form action="dashboard.store" method="post">
+                    @if ($errors->any())
+                      <div class="alert alert-danger">
+                        <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
+                        <ul>
+                          @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                          @endforeach
+                        </ul>
+                      </div>
+                    @endif
+                  <form action="{{route('dashboard.store')}}" method="post">
+                    @csrf
                     <div class="form-group">
                       <label for="job_title"><strong>JOB TITLE:</strong></label>
                       <input type="text" class="form-control" name="job_title">
@@ -38,7 +49,7 @@
                     <!-- End Slug -->
                     <div class="form-group">
                       <label for="job_description"><strong>JOB DESCRIPTION:</strong></label>
-                      <textarea name="" id="" rows="10" class="form-control"></textarea>
+                      <textarea name="job_description" id="job_description" rows="10" class="form-control"></textarea>
                     </div>
                     <!-- End Job Description -->
                       <button class="btn btn-success" type="submit">Save</button>

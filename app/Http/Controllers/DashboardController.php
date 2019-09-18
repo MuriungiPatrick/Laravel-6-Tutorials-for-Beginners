@@ -46,7 +46,15 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+          'job_title'           => 'required',
+          'slug'                 => 'required|unique:jobs',
+          'job_type'          => 'required',
+          'salary'              => 'required|numeric',
+          'job_description' => 'required|min:250'
+        ]);
+        $request->user()->jobs()->create($request->all());
+        return redirect('dashboard')->with('message', 'Job Post created');
     }
 
     /**
@@ -85,8 +93,8 @@ class DashboardController extends Controller
           'job_title'           => 'required',
           'slug'                 => 'required',
           'job_type'          => 'required',
-          'salary'              => 'required',
-          'job_description' => 'max:1000'
+          'salary'              => 'required|numeric',
+          'job_description' => 'required|min:250'
         ]);
         Job::find($id)->update($request->all());
         return redirect()->route('dashboard.index')->with('message', 'Job Post Updated successfully');
@@ -103,6 +111,6 @@ class DashboardController extends Controller
        $job = Job::find($id);
        $job->delete();
 
-       return redirect('/dashboard')->with('message', 'Job Post deleted successfully');
+       return redirect('/dashboard')->with('message', 'Job Post Deleted');
     }
 }
