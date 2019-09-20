@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -90,4 +90,16 @@
         </main>
     </div>
 </body>
+<script type="text/javascript">
+  $('#job_title').on('keyup', function() {
+    var theTitle = this.value.toLowerCase().trim();
+    slugInput = $('#slug'),
+    theSlug = theTitle.replace(/&/g, '-and-')
+    .replace(/[^a-z0-9-]+/g, '-')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+|-+&/g, '');
+
+    slugInput.val(theSlug);
+  });
+</script>
 </html>

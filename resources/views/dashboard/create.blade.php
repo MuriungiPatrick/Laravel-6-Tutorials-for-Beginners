@@ -29,9 +29,14 @@
                     @csrf
                     <div class="form-group">
                       <label for="job_title"><strong>JOB TITLE:</strong></label>
-                      <input type="text" class="form-control" name="job_title">
+                      <input type="text" id="job_title" class="form-control" name="job_title">
                     </div>
                     <!-- End Job Title -->
+                    <div class="form-group">
+                      <label for="slug"><strong>SLUG:</strong></label>
+                      <input type="text" id="slug" class="form-control" name="slug">
+                    </div>
+                    <!-- End Slug -->
                     <div class="form-group">
                       <label for="job_type"><strong>JOB TYPE:</strong></label>
                       <input type="text" class="form-control" name="job_type">
@@ -42,11 +47,6 @@
                       <input type="text" class="form-control" name="salary">
                     </div>
                     <!-- End Salary-->
-                    <div class="form-group">
-                      <label for="slug"><strong>SLUG:</strong></label>
-                      <input type="text" class="form-control" name="slug">
-                    </div>
-                    <!-- End Slug -->
                     <div class="form-group">
                       <label for="job_description"><strong>JOB DESCRIPTION:</strong></label>
                       <textarea name="job_description" id="job_description" rows="10" class="form-control"></textarea>

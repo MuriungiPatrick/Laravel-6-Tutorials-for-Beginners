@@ -20,7 +20,7 @@
                       @csrf
                       <div class="form-group">
                         <label for="job_title"><strong>JOB TITLE:</strong></label>
-                        <input type="text" class="form-control" name="job_title" value="{{$job->job_title}}">
+                        <input type="text" id="job_title" class="form-control" name="job_title" value="{{$job->job_title}}">
                       </div>
                       <!-- End Job Title -->
                       <div class="form-group">
@@ -35,7 +35,7 @@
                       <!-- End Salary-->
                       <div class="form-group">
                         <label for="slug"><strong>SLUG:</strong></label>
-                        <input type="text" class="form-control" name="slug" value="{{$job->slug}}">
+                        <input type="text" id="slug" class="form-control" name="slug" value="{{$job->slug}}">
                       </div>
                       <!-- End Slug -->
                       <div class="form-group">
