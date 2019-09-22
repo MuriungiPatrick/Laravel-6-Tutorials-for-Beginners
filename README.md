@@ -1,4 +1,4 @@
-# Quick-Guide-to-Laravel-for-Beginners
+# Quick Guide to Laravel for Beginners
 
 
 ### Hello and welcome to this course.
