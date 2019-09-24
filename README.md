@@ -7,7 +7,7 @@ Am assuming you have never done any project with Laravel before, this course is 
 
 If you are looking to get started with laravel then this course is for you.
 
-This is a Quick Introduction course to laravel for anyone interested in starting doing projects with laravel. the course has practical examples that are quick to easy and follow.
+This is a Quick Introduction course to laravel for anyone interested in starting doing projects with laravel. the course has practical examples that are quick and easy to follow.
 
 In this course we are breaking down all of the basics of Laravel to get you start doing projects with confidence.
 
