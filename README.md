@@ -1,5 +1,6 @@
-# Quick Guide to Laravel for Beginners
+# Laravel 6 Tutorials for Beginner Series
 
+![](https://user-images.githubusercontent.com/11283502/71830601-1d2fa980-30b8-11ea-8711-05468cdd268a.jpg)
 
 ### Hello and welcome to this course.
 
