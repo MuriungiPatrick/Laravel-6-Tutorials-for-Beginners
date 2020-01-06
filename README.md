@@ -2,6 +2,8 @@
 
 ![](https://user-images.githubusercontent.com/11283502/71830601-1d2fa980-30b8-11ea-8711-05468cdd268a.jpg)
 
+### Check the Course on youtube https://www.youtube.com/watch?v=_g9m1oESSoM&list=PLb6bnKCHlCwlGL0irdA1j8DcPgeZGbFvU
+
 ### Hello and welcome to this course.
 
 Hello and welcome to this course.
